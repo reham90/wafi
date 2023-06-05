@@ -1,6 +1,6 @@
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 body {
   font-family: "Neo Sans Arabic Regular";
   box-sizing: border-box;
@@ -318,7 +318,8 @@ header {
 .cats-dispaly {
   border-radius: 10px;
   position: absolute;
-  right: -10%;
+  left: 90%;
+    transform: translateX(-90%);
   
   top: calc(100% + 8px);
   z-index: -1;
@@ -337,8 +338,9 @@ header {
   transition: all 0.3s ease-in-out;
 }
 html[dir="ltr"] .cats-dispaly{
- left:-10%;
- right: 0;
+  left: -23%;
+  transform: translateX(0%);
+  min-width: 240px;
 }
 
 .cats-dispaly-3 {
@@ -362,7 +364,7 @@ html[dir="ltr"] .cats-dispaly{
   transition: all 0.3s ease-in-out;
 }
 html[dir="ltr"] .cats-dispaly-3{
-  right: -192.3%;
+  right: -183.3%;
   left: auto;
 }
 
@@ -599,6 +601,9 @@ html[dir="ltr"] .first-level-link:after {
   height: 84px;
   margin-bottom: 47px;
 }
+html[dir="ltr"] .service-img{
+  margin-bottom: 25px;
+}
 .service-title-div {
   height: 56px;
 }
@@ -615,7 +620,7 @@ html[dir="ltr"] .first-level-link:after {
   line-height: 1.556;
 }
 html[dir="ltr"] .service-title{
-  width: 250px;
+ 
   font-size: 16px;
 }
 .about-us-section {
