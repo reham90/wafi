@@ -735,6 +735,12 @@ html[dir="ltr"] .service-title{
 .mission-text {
   background-color: #e9f5ff;
 }
+.mission-text .vision-text-content{
+  padding-inline-start: 0;
+  padding-inline-end: calc((100vw - 1140px) / 2);
+  position: absolute;
+  inset-inline-end: 0;
+}
 
 /*                      mission-section                      */
 
@@ -1484,6 +1490,9 @@ html[dir="rtl"] .footer-accordion.active:after {
   .footer-bg {
     max-width: 150px;
 }
+.mission-text .vision-text-content{
+  position: relative;
+}
 }
 @media (min-width: 992px) {
   .slide-menu:hover .cats-dispaly {
@@ -1509,7 +1518,7 @@ html[dir="rtl"] .footer-accordion.active:after {
     order: 0;
   }
   .vision-text-content {
-    padding-inline-start: calc((100vw - 720px) / 2);
+    padding-inline-start: calc((100vw - 720px) / 2) !important;
   }
   .vision-paragraph {
     max-width: 300px;
