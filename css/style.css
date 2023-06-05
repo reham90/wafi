@@ -103,7 +103,9 @@ html[dir="ltr"] .progress-bar {
   font-weight: 900;
   font-family: "Line Awesome Free";
   font-size: 10px;
+  margin-inline-start: 4px;
 }
+
 
 .language-anchor {
   margin-inline-end: 30px;
@@ -161,7 +163,7 @@ header {
 }
 .contact-link {
   position: relative;
-  z-index: 9;
+  
   border-radius: 20px;
   background-color: var(--main-hover);
   color: #fff;
@@ -182,7 +184,7 @@ header {
   opacity: 0.102;
   border-radius: 300px;
 
-  animation: pulsate 2.5s ease-out;
+  animation: pulsate 2s ease-out;
   animation-iteration-count: infinite;
   opacity: 0;
   content: "";
@@ -190,8 +192,8 @@ header {
   margin: auto;
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: -3px;
+  right: -3px;
   bottom: 0;
   width: 149px;
   height: 44px;
@@ -208,9 +210,7 @@ header {
     transform: scale(0.1, 0.1);
     opacity: 0;
   }
-  30% {
-    opacity: 0.5;
-  }
+ 
   50% {
     opacity: 1;
   }
@@ -248,7 +248,7 @@ header {
   border-radius: 300px;
   height: 63px;
   width: 63px;
-  animation: pulsate 2.5s ease-out;
+  animation: pulsate 2s ease-out;
   animation-iteration-count: infinite;
   opacity: 0;
   content: "";
@@ -256,8 +256,8 @@ header {
   margin: auto;
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: -5px;
+  right: -5px;
   bottom: 0;
 }
 .whatsapp-btn:focus {
@@ -312,12 +312,14 @@ header {
 .cats-dispaly .cat-li:first-child {
   padding-top: 14px;
 }
-
+.without-arrow:after{
+  content: " " !important;
+}
 .cats-dispaly {
   border-radius: 10px;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  right: -10%;
+  
   top: calc(100% + 8px);
   z-index: -1;
   opacity: 0;
@@ -333,6 +335,10 @@ header {
   border: none;
   padding: 0px 20px 20px;
   transition: all 0.3s ease-in-out;
+}
+html[dir="ltr"] .cats-dispaly{
+ left:-10%;
+ right: 0;
 }
 
 .cats-dispaly-3 {
@@ -518,7 +524,8 @@ html[dir="ltr"] .first-level-link:after {
   justify-content: center;
   background-image: url(../images/scroll-down.png);
   background-repeat: no-repeat;
-  height: 43px;
+  height: 45px;
+  background-size: cover;
   width: 28px;
 }
 .scroll-down {
@@ -538,7 +545,10 @@ html[dir="ltr"] .first-level-link:after {
   background-color: #fff;
   height: 8px;
   width: 1px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   position: relative;
   animation-name: scr-pos;
   animation-duration: 2s;
@@ -604,6 +614,10 @@ html[dir="ltr"] .first-level-link:after {
   width: 200px;
   line-height: 1.556;
 }
+html[dir="ltr"] .service-title{
+  width: 250px;
+  font-size: 16px;
+}
 .about-us-section {
   display: flex;
   justify-content: center;
@@ -667,7 +681,7 @@ html[dir="ltr"] .first-level-link:after {
   padding: 159px 0 174px;
 }
 .vision-text-content {
-  padding-inline-start: calc((100vw - 1170px) / 2);
+  padding-inline-start: calc((100vw - 1140px) / 2);
 }
 .vision-title {
   font-size: 24px;
@@ -724,6 +738,13 @@ html[dir="ltr"] .first-level-link:after {
   margin: 0;
   padding: 0;
   padding-inline-start: 20px;
+}
+.aims-list li{
+  line-height: 1.7;
+  margin-bottom: 9px;
+}
+.aims-list li:last-child{
+  margin-bottom: 0;
 }
 
 /*                    aims-section                              */
@@ -845,14 +866,15 @@ html[dir="ltr"] .first-level-link:after {
   background: var(--main-color);
   overflow: hidden;
 }
-.footer:after {
-  content: url(../images/footer-shape.png);
+.footer-bg{
   position: absolute;
-  padding-top: 52px;
   bottom: 0;
   inset-inline-end: 0;
+  pointer-events: none;
+  z-index: 1;
+  margin: 0;
 }
-html[dir="ltr"] .footer:after{
+html[dir="ltr"] .footer-bg{
   transform: scaleX(-1);
 }
 .footer-cont {
@@ -1141,7 +1163,7 @@ html[dir="rtl"] .footer-accordion.active:after {
 .arrow-top {
   position: fixed;
   bottom: 75px;
-  inset-inline-start: 10px;
+  inset-inline-start: 21px;
   display: none;
   z-index: 10;
   text-decoration: none !important;
@@ -1258,7 +1280,7 @@ html[dir="rtl"] .footer-accordion.active:after {
     font-size: 13px;
   }
   .nav-header .img-logo img {
-    max-width: 75px;
+    max-width: 110px;
   }
   .nav-header li a {
     display: flex;
@@ -1436,6 +1458,27 @@ html[dir="rtl"] .footer-accordion.active:after {
     top: 0;
     padding-top: 0;
   }
+  .slide-menu-2 .first-level-link{
+    font-size: 14px;
+    padding-inline-start: 10px;
+    display: block;
+  }
+  .second-level-link{
+    font-size: 13px;
+    padding-inline-start: 20px;
+    display: block;
+  }
+  .language-and-contact-section .language-anchor{
+    display: none;
+  }
+  .big-menu .language-anchor{
+    font-family: "Neo Sans Arabic Regular";
+    position: absolute;
+    top: 25px;
+  }
+  .footer-bg {
+    max-width: 150px;
+}
 }
 @media (min-width: 992px) {
   .slide-menu:hover .cats-dispaly {
