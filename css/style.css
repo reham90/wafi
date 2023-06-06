@@ -683,7 +683,8 @@ html[dir="ltr"] .service-title{
 }
 .vision-text {
   background-color: #d3e5f4;
-  padding: 159px 0 174px;
+  display: flex;
+    align-items: center;
 }
 .vision-text-content {
   padding-inline-start: calc((100vw - 1140px) / 2);
